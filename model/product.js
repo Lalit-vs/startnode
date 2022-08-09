@@ -14,6 +14,5 @@ const productSchema=new mongoose.Schema({
     category:{type: Schema.Types.ObjectId,ref: 'Category'},
     sub_category:{type: Schema.Types.ObjectId,default: null},
     stock:{ type:Number,default: 0 }
-}, {timestamp:true});
-
+}, {timestamps:true});
 module.exports = mongoose.model("products", productSchema);

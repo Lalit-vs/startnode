@@ -19,5 +19,9 @@ router.get("/user", function(req,res){
 
 router.post("/user_create", userscontroller.create);
 router.post("/add_product", productcontroller.product_create);
+router.get("/products", productcontroller.all_products);
+router.get("/product_details", productcontroller.product_details);
+router.put("/update_product/:id", productcontroller.update_product);
+router.put("/delete_product/:id", productcontroller.delete_product);
 
 module.exports = router;
